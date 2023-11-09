@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ .Values.app.name }}-configmap
+  namespace: {{ .Values.app.name }}
 data:
   RABBITMQ_URL: {{ .Values.configmap.rabbitmq_url }}
   RABBITMQ_PORT: {{ .Values.configmap.rabbitmq_port }}
