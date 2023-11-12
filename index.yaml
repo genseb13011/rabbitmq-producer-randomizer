@@ -3,12 +3,12 @@ entries:
   rabbitmq-producer-randomizer:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-11-12T23:45:19.730862256+01:00"
+    created: "2023-11-12T23:52:52.183343464+01:00"
     description: random messages producer for rabbitmq
-    digest: 69de32c4a9897303df594a5530622db8645d995c132f334b80eb0d57e673cb24
+    digest: 4783ae88ca95b3a35912ee88c5aa68f52b5b414ae82cd2b3dec6e554679264a5
     name: rabbitmq-producer-randomizer
     type: application
     urls:
     - rabbitmq-producer-randomizer-0.0.1.tgz
     version: 0.0.1
-generated: "2023-11-12T23:45:19.729650373+01:00"
+generated: "2023-11-12T23:52:52.183006465+01:00"
