@@ -16,8 +16,12 @@ spec:
         app: {{ .Values.app.name }}
     spec:
       containers:
-      - name: {{ .Values.app.name }} 
+      - name: {{ .Values.app.name }}
+        {{ if .Values.image.tag }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        {{ else }}
+        image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
+        {{ end }}
         envFrom:
         - configMapRef:
             name: {{ .Values.app.name }}-configmap
