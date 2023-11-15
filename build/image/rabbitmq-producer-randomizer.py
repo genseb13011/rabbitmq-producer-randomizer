@@ -1,6 +1,7 @@
 #!/usr/bin/env python
-import pika, random, time, os 
- 
+import pika, random, time, os
+from prometheus_client import start_http_server, Counter
+
 #variables 
 rabbitmq_user=os.environ.get('RABBITMQ_USER') 
 rabbitmq_password=os.environ.get('RABBITMQ_PASSWORD') 
@@ -14,7 +15,11 @@ random_message_length_max=int(os.environ.get('RANDOM_MESSAGE_LENGTH_MAX'))
 random_message_characters=os.environ.get('RANDOM_MESSAGE_CHARACTERS') 
 message_generation_milliseconds=int(os.environ.get('MESSAGE_GENERATION_MILLISECONDS')) 
 messages_to_process_before_closing_connection=int(os.environ.get('MESSAGES_TO_PROCESS_BEFORE_CLOSING_CONNECTION')) 
- 
+prometheus_metrics_port=int(os.environ.get('PROMETHEUS_METRICS_PORT'))
+messages_random_count = Counter('rabbitmq_random_messages_count','total of random messages sent to rabbitmq')
+
+start_http_server(prometheus_metrics_port)
+
 credentials = pika.PlainCredentials(rabbitmq_user, rabbitmq_password)  
  
 infinite_loop = True 
@@ -27,8 +32,8 @@ while (infinite_loop):
         message_body = ''.join(random.choice(random_message_characters) for i in range (message_length))  
         channel.basic_publish(exchange=rabbitmq_exchange, 
                               routing_key=random_message_routing_key, 
-                              body=message_body) 
- 
+                              body=message_body)
+        messages_random_count.inc()
         time.sleep(message_generation_milliseconds/1000) 
         print(" [x] Message %s sent" % (message_body)) 
  

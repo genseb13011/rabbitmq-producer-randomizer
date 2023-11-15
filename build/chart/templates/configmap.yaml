@@ -14,3 +14,4 @@ data:
   RANDOM_MESSAGE_CHARACTERS: "{{ .Values.configmap.random_message_characters }}"
   MESSAGE_GENERATION_MILLISECONDS: "{{ .Values.configmap.message_generation_milliseconds }}"
   MESSAGES_TO_PROCESS_BEFORE_CLOSING_CONNECTION: "{{ .Values.configmap.messages_to_process_before_closing_connection }}"
+  PROMETHEUS_METRICS_PORT: "{{ .Values.configmap.prometheus_metrics_port }}"

@@ -22,3 +22,4 @@ configmap:
   random_message_characters:
   message_generation_milliseconds:
   messages_to_process_before_closing_connection:
+  prometheus_metrics_port:

@@ -2,5 +2,5 @@ apiVersion: v2
 name: rabbitmq-producer-randomizer
 description: random messages producer for rabbitmq
 type: application
-version: 0.0.3
-appVersion: 0.0.3
+version: 0.0.4
+appVersion: 0.0.4
