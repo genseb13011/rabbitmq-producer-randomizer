@@ -3,7 +3,17 @@ entries:
   rabbitmq-producer-randomizer:
   - apiVersion: v2
     appVersion: 0.0.6
-    created: "2023-11-16T00:11:16.726730809+01:00"
+    created: "2023-11-16T00:15:54.019383087+01:00"
+    description: random messages producer for rabbitmq
+    digest: de667648999b43c589e03d20dd0ac368e664a05e6991269ddbc2727cd70eb262
+    name: rabbitmq-producer-randomizer
+    type: application
+    urls:
+    - rabbitmq-producer-randomizer-0.0.7.tgz
+    version: 0.0.7
+  - apiVersion: v2
+    appVersion: 0.0.6
+    created: "2023-11-16T00:15:54.01909971+01:00"
     description: random messages producer for rabbitmq
     digest: afe02a6af0a19f8200cd49cde9ade5d75b03b83a4b664b0853e351c0f51f2c40
     name: rabbitmq-producer-randomizer
@@ -13,7 +23,7 @@ entries:
     version: 0.0.6
   - apiVersion: v2
     appVersion: 0.0.5
-    created: "2023-11-16T00:11:16.726364025+01:00"
+    created: "2023-11-16T00:15:54.018810831+01:00"
     description: random messages producer for rabbitmq
     digest: b968cb564037e57559f73947fdecd539063a4badaa2b8b85b9e4c67e401bd06f
     name: rabbitmq-producer-randomizer
@@ -23,7 +33,7 @@ entries:
     version: 0.0.5
   - apiVersion: v2
     appVersion: 0.0.4
-    created: "2023-11-16T00:11:16.726158128+01:00"
+    created: "2023-11-16T00:15:54.018526667+01:00"
     description: random messages producer for rabbitmq
     digest: 9f304502cceabf942a9c5f6b49d0d04b4897cc69f1791bf9b8ffd0a16ccf54c3
     name: rabbitmq-producer-randomizer
@@ -33,7 +43,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: 0.0.3
-    created: "2023-11-16T00:11:16.72594924+01:00"
+    created: "2023-11-16T00:15:54.018200265+01:00"
     description: random messages producer for rabbitmq
     digest: 762e9c8f24e3fade2426404203d57dc7db43622cd44fc90e8269931673fff738
     name: rabbitmq-producer-randomizer
@@ -43,7 +53,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2023-11-16T00:11:16.725739696+01:00"
+    created: "2023-11-16T00:15:54.017914735+01:00"
     description: random messages producer for rabbitmq
     digest: c43b2e6c75b79a03c390628e52e3141a388dbe8b8c7a5b000362ceb4631e541a
     name: rabbitmq-producer-randomizer
@@ -53,7 +63,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-11-16T00:11:16.725528323+01:00"
+    created: "2023-11-16T00:15:54.017652528+01:00"
     description: random messages producer for rabbitmq
     digest: e79e3842266fdd200d4edd64d821df03321e3a0c559ca8a01bb4cf1dab23423e
     name: rabbitmq-producer-randomizer
@@ -61,4 +71,4 @@ entries:
     urls:
     - rabbitmq-producer-randomizer-0.0.1.tgz
     version: 0.0.1
-generated: "2023-11-16T00:11:16.725169309+01:00"
+generated: "2023-11-16T00:15:54.017266144+01:00"
