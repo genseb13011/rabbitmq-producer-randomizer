@@ -2,7 +2,7 @@
 import pika, random, time, os
 from prometheus_client import start_http_server, Counter
 
-#variables 
+###variables 
 rabbitmq_user=os.environ.get('RABBITMQ_USER') 
 rabbitmq_password=os.environ.get('RABBITMQ_PASSWORD') 
 rabbitmq_url=os.environ.get('RABBITMQ_URL') 
@@ -16,7 +16,9 @@ random_message_characters=os.environ.get('RANDOM_MESSAGE_CHARACTERS')
 message_generation_milliseconds=int(os.environ.get('MESSAGE_GENERATION_MILLISECONDS')) 
 messages_to_process_before_closing_connection=int(os.environ.get('MESSAGES_TO_PROCESS_BEFORE_CLOSING_CONNECTION')) 
 prometheus_metrics_port=int(os.environ.get('PROMETHEUS_METRICS_PORT'))
+#prometheus metrics
 messages_random_count = Counter('rabbitmq_random_messages_count','total of random messages sent to rabbitmq')
+rabbitmq_connection_closed_count = Counter('rabbitmq_connection_closed','total of connection closed')
 
 start_http_server(prometheus_metrics_port)
 
@@ -40,4 +42,5 @@ while (infinite_loop):
         random_message_count = random_message_count + 1
 
     connection.close()
+    rabbitmq_connection_closed_count.inc()
     print("Connection closed")

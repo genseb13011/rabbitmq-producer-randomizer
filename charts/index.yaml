@@ -2,8 +2,18 @@ apiVersion: v1
 entries:
   rabbitmq-producer-randomizer:
   - apiVersion: v2
+    appVersion: 0.0.5
+    created: "2023-11-15T23:37:13.668232747+01:00"
+    description: random messages producer for rabbitmq
+    digest: b968cb564037e57559f73947fdecd539063a4badaa2b8b85b9e4c67e401bd06f
+    name: rabbitmq-producer-randomizer
+    type: application
+    urls:
+    - rabbitmq-producer-randomizer-0.0.5.tgz
+    version: 0.0.5
+  - apiVersion: v2
     appVersion: 0.0.4
-    created: "2023-11-15T23:28:22.438105812+01:00"
+    created: "2023-11-15T23:37:13.667978168+01:00"
     description: random messages producer for rabbitmq
     digest: 9f304502cceabf942a9c5f6b49d0d04b4897cc69f1791bf9b8ffd0a16ccf54c3
     name: rabbitmq-producer-randomizer
@@ -13,7 +23,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: 0.0.3
-    created: "2023-11-15T23:28:22.437698854+01:00"
+    created: "2023-11-15T23:37:13.667742423+01:00"
     description: random messages producer for rabbitmq
     digest: 762e9c8f24e3fade2426404203d57dc7db43622cd44fc90e8269931673fff738
     name: rabbitmq-producer-randomizer
@@ -23,7 +33,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2023-11-15T23:28:22.436621019+01:00"
+    created: "2023-11-15T23:37:13.667504292+01:00"
     description: random messages producer for rabbitmq
     digest: c43b2e6c75b79a03c390628e52e3141a388dbe8b8c7a5b000362ceb4631e541a
     name: rabbitmq-producer-randomizer
@@ -33,7 +43,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-11-15T23:28:22.435900024+01:00"
+    created: "2023-11-15T23:37:13.667240592+01:00"
     description: random messages producer for rabbitmq
     digest: e79e3842266fdd200d4edd64d821df03321e3a0c559ca8a01bb4cf1dab23423e
     name: rabbitmq-producer-randomizer
@@ -41,4 +51,4 @@ entries:
     urls:
     - rabbitmq-producer-randomizer-0.0.1.tgz
     version: 0.0.1
-generated: "2023-11-15T23:28:22.434145357+01:00"
+generated: "2023-11-15T23:37:13.666835579+01:00"
