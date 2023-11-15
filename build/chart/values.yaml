@@ -23,3 +23,10 @@ configmap:
   message_generation_milliseconds:
   messages_to_process_before_closing_connection:
   prometheus_metrics_port:
+
+deployment:
+  annotations:
+    prometheus:
+      scrape: "true"
+      scheme: "http"
+      path: "/"

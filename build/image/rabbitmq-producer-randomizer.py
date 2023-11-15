@@ -17,7 +17,7 @@ message_generation_milliseconds=int(os.environ.get('MESSAGE_GENERATION_MILLISECO
 messages_to_process_before_closing_connection=int(os.environ.get('MESSAGES_TO_PROCESS_BEFORE_CLOSING_CONNECTION')) 
 prometheus_metrics_port=int(os.environ.get('PROMETHEUS_METRICS_PORT'))
 #prometheus metrics
-messages_random_count = Counter('rabbitmq_random_messages_count','total of random messages sent to rabbitmq')
+messages_random_count = Counter('rabbitmq_random_messages_count','total of random messages sent to rabbitmq',['rabbitmq_url','vhost','exchange','rounting_key'])
 rabbitmq_connection_closed_count = Counter('rabbitmq_connection_closed','total of connection closed')
 
 start_http_server(prometheus_metrics_port)
@@ -35,7 +35,7 @@ while (infinite_loop):
         channel.basic_publish(exchange=rabbitmq_exchange, 
                               routing_key=random_message_routing_key, 
                               body=message_body)
-        messages_random_count.inc()
+        messages_random_count.labels(rabbitmq_url,rabbitmq_vhost,rabbitmq_exchange,random_message_routing_key).inc()
         time.sleep(message_generation_milliseconds/1000) 
         print(" [x] Message %s sent" % (message_body)) 
  
