@@ -16,7 +16,7 @@ spec:
         app: {{ .Values.app.name }}
       annotations:
         prometheus.io/scrape: "{{ .Values.deployment.annotations.prometheus.scrape }}"
-        prometheus.io.scheme: "{{ .Values.deployment.annotations.prometheus.scheme }}"
+        prometheus.io/scheme: "{{ .Values.deployment.annotations.prometheus.scheme }}"
         prometheus.io/path: "{{ .Values.deployment.annotations.prometheus.path }}"
         prometheus.io/port: "{{ .Values.configmap.prometheus_metrics_port }}"
     spec:
