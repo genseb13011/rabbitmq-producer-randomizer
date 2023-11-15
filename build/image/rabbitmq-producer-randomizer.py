@@ -13,7 +13,7 @@ random_message_length_min=int(os.environ.get('RANDOM_MESSAGE_LENGTH_MIN'))
 random_message_length_max=int(os.environ.get('RANDOM_MESSAGE_LENGTH_MAX')) 
 random_message_characters=os.environ.get('RANDOM_MESSAGE_CHARACTERS') 
 message_generation_milliseconds=int(os.environ.get('MESSAGE_GENERATION_MILLISECONDS')) 
-messages_to_process_before_closing_connection=int(os.environ.get('MESSAGE_TO_PROCESS_BEFORE_CLOSING_CONNECTION')) 
+messages_to_process_before_closing_connection=int(os.environ.get('MESSAGES_TO_PROCESS_BEFORE_CLOSING_CONNECTION')) 
  
 credentials = pika.PlainCredentials(rabbitmq_user, rabbitmq_password)  
  

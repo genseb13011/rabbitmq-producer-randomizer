@@ -1,6 +1,8 @@
 app:
   name: rabbitmq-producer-randomizer
 
+replicas: 1
+
 image:
   repository: genseb/rabbitmq-producer-randomizer
   tag:
