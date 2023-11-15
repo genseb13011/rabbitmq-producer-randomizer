@@ -21,4 +21,4 @@ configmap:
   random_message_length_max:
   random_message_characters:
   message_generation_milliseconds:
-  message_to_process_before_closing_connection:
+  messages_to_process_before_closing_connection:
