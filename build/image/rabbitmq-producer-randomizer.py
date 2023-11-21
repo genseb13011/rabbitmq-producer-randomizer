@@ -37,10 +37,10 @@ while (infinite_loop):
                               body=message_body)
         messages_random_count.labels(rabbitmq_url,rabbitmq_vhost,rabbitmq_exchange,random_message_routing_key).inc()
         time.sleep(message_generation_milliseconds/1000) 
-        print(" [x] Message %s sent" % (message_body)) 
+        print(" [x] Message %s sent" % (message_body), flush=True) 
  
         random_message_count = random_message_count + 1
 
     connection.close()
     rabbitmq_connection_closed_count.inc()
-    print("Connection closed")
+    print("Connection closed", flush=True)
